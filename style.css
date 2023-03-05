@@ -1,0 +1,80 @@
+.container{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 5px 10px 40px gray;
+}
+.headline{
+    color: coral;
+}
+p{
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#input{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+#input::placeholder{
+    color: #aaaaaa9c;
+}
+#input:focus{
+    outline: none;
+    border: 3px solid #38ec02;
+}
+.btn{
+    padding: 8px 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: coral;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    background: linear-gradient(to right, orange, tomato);
+    transition-delay: 1s;
+  }
+  .btn:hover{
+    background: linear-gradient(to right, #ddd, skyblue);
+  }
+  .element-box{
+    width: 80%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin : 5px;
+    color: rgb(44, 44, 91);
+    opacity: 0.8;
+  }
+  #shuffle-btn{
+    margin: 10px 0 0 0;
+  }
+  table, th, td{
+    border: 1px solid rgb(118, 117, 117);
+  }
+  table{
+    border-collapse: collapse;
+  }
+  th, td{
+    width: 200px;
+    text-align: center;
+    padding: 5px 10px;
+  }
+  th > input{
+    width: 100%;
+    text-align: center;
+    outline: none;
+    border: none;
+  }

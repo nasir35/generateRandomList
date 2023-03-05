@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Shuffle and Choose</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="headline">Shuffle and Pick Randomly..!!</h1>
+        <p>Enter elements which you want to be shuffled and randomly choose: </p>
+        <form id="form" onsubmit="return false">
+            <input id="input" placeholder="107" tabindex="1" />
+            <input type="submit" value="ADD" id="addBtn" class="btn"/>
+        </form>
+
+        <p>Added elements: </p>
+        <div class="element-box added-elements">
+        <p>AddedItem = <span id="added-elements"></span></p>
+        </div>
+
+        <button id="shuffle-btn" class="btn">Shuffle and Pick One</button>
+
+        <p>Picked Elements: </p>
+        <div class="element-box picked-elements">
+        <p>PickedItem = </p>
+        <table id="picked-elements">
+            <tr>
+                <th><input type="text" placeholder="SL No"></th>
+                <th><input type="text" placeholder="Picked Item"></th>
+            </tr>
+        </table>
+
+        <button id="download-btn" class="btn" style="float:right;">Downlod</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
