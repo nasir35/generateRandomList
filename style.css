@@ -78,3 +78,6 @@ p{
     outline: none;
     border: none;
   }
+  #inp1{
+    width: 50%;
+  }

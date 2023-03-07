@@ -11,15 +11,30 @@ addedElements.innerText = elements.length>0? elements : '{}';
 
 const addElement = () => {
     if(inputVal.value.length){
-        let element = inputVal.value;
-        elements = [...elements, element];
-        addedElements.innerText = elements;
-        inputVal.value = "";
+        if(elements.indexOf(inputVal.value)===-1){
+            let element = inputVal.value;
+            elements = [...elements, element];
+            addedElements.innerText = elements;
+            inputVal.value = "";
+        }
+        else{
+            window.alert('Item already exist!');
+        }
     }
 }
 
 addBtn.addEventListener("click", () => addElement());
 
+const choice = document.getElementById('choice');
+const inp1 = document.getElementById("inp1");
+choice.addEventListener("change", () => {
+    if(choice.value === "individual"){
+        inp1.disabled = false;
+    }
+    else{
+        inp1.disabled = true;
+    }
+});
 let pickedItems= [];
 let count = 0;
 const shuffle = () => {
@@ -83,6 +98,9 @@ const download = () => {
             outline: none;
             border: none;
           }
+          #choice{
+            display: none;
+          }
         </style>
     </head>
     <body>
@@ -97,6 +115,6 @@ const download = () => {
     </body>
     `
     newWin.document.write(newHtml.outerHTML);
-    // newWin.print();
+    newWin.print();
 }
 downloadBtn.addEventListener('click', () => download());
