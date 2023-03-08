@@ -8,7 +8,7 @@
         <h1 class="headline">Shuffle and Pick Randomly..!!</h1>
         <p>Enter elements which you want to be shuffled and randomly choose: </p>
         <form id="form" onsubmit="return false">
-            <input id="input" placeholder="107" tabindex="1" />
+            <input id="input" class="input" type="text" placeholder="107" tabindex="1"/><span id="require"></span>
             <input type="submit" value="ADD" id="addBtn" class="btn"/>
         </form>
 
@@ -17,20 +17,27 @@
         <p>AddedItem = <span id="added-elements"></span></p>
         </div>
 
-        <button id="shuffle-btn" class="btn">Shuffle and Pick One</button>
+        <div id="shuffle-box" class="shuffle-box">
+          <form id="pick-option" onsubmit="return false">
+          <input id="inp1" class="input" type="text" placeholder="SL No" disabled> 
+          <div class="">
+            <label for="choice">Picked For</label>
+            <select id="choice">
+                <option value="count">All</option>
+                <option value="individual">Individual</option>
+            </select>
+          </div>
+          <input type="text" id="picked-item" class="input" placeholder="Item Type">
+          <input type="submit" value="Shuffle and Pick One" id="shuffle-btn" class="btn"/>
+        </form>
+        </div>
 
         <p>Picked Elements: </p>
         <div class="element-box picked-elements">
-        <p>PickedItem = </p>
         <table id="picked-elements">
             <tr>
-                <th><input id="inp1" type="text" placeholder="SL No" disabled> 
-                <label for="choice"></label>
-                <select id="choice">
-                    <option value="count">Count</option>
-                    <option value="individual">Individual</option>
-                </select></th>
-                <th><input type="text" placeholder="Picked Item"></th>
+                <th id="th1"></th>
+                <th id="th2"></th>
             </tr>
         </table>
 

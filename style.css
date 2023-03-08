@@ -13,21 +13,22 @@
     color: coral;
 }
 p{
+    margin: 5px 0;
     font-size: 1.2rem;
     color: #333;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#input{
+.input{
     width: 100%;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px 0;
 }
-#input::placeholder{
-    color: #aaaaaa9c;
+.input::placeholder{
+    color: #aaaaaaa9;
 }
-#input:focus{
+.input:focus{
     outline: none;
     border: 3px solid #38ec02;
 }
@@ -40,7 +41,7 @@ p{
     font-weight: bold;
     cursor: pointer;
     margin: 5px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background: linear-gradient(to right, orange, tomato);
     transition-delay: 1s;
   }
@@ -78,6 +79,24 @@ p{
     outline: none;
     border: none;
   }
-  #inp1{
-    width: 50%;
+  .shuffle-box{
+    border: 1px solid lightblue;
+    width: 80%;
+    margin: 15px auto;
+    border-radius: 15px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+  .shuffle-box form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  #shuffle-btn{
+    grid-column: 2;
+  }
+.invalid{
+    border-color: red;
   }
